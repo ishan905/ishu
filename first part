@@ -36,7 +36,16 @@
 	 Student temp = s[j]; 
 	 s[j]=s[j+1]; 
 	 s[j+1]=temp; 
-	 int main(){ 
+	 } 
+	 } 
+	 } 
+	 } 
+	 
+	} 
+	 
+	 
+	 
+	int main(){ 
 		Student s[3]={}; 
 	 
 	 
@@ -58,17 +67,12 @@
 	 TotalTaskTime(s); 
 	 s[0].F_time--; 
 	 SORT_DESC(s); 
-	  printf("STUDENTS ENTERED THE QUEUE IN THE FOLLOWING WAY \n"); 
-	 while(REMAIN(s)){ 
-	 printf("%d\n ",s[0].id); 
-	 TotalTaskTime(s); 
-	 s[0].F_time--; 
-	 SORT_DESC(s); 
 	 } 
 	 int sum = 0; 
 	 int sum1 = 0; 
-	 printf("STUDENT ID | TURN AROUND TIME | WAITING TIME\n");
-	  printf("%d :\t\t %d \t\t",s[i].id,s[i].CompletionTime); 
+	 printf("STUDENT ID | TURN AROUND TIME | WAITING TIME\n"); 
+	 for(int i=0;i<3;i++){ 
+	 printf("%d :\t\t %d \t\t",s[i].id,s[i].CompletionTime); 
 	 printf("%d \n",s[i].CompletionTime - s[i].B_time); 
 	 sum += s[i].CompletionTime; 
 	 sum1 += s[i].CompletionTime - s[i].B_time; 
