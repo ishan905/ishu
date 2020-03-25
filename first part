@@ -36,3 +36,25 @@
 	 Student temp = s[j]; 
 	 s[j]=s[j+1]; 
 	 s[j+1]=temp; 
+	 int main(){ 
+		Student s[3]={}; 
+	 
+	 
+		for(int i=0;i<3;i++){ 
+	 printf("ENTER THE ID NUMBER OF THE STUDENT NUMBER %d \n",i+1); 
+	 scanf("%d",&s[i].id); 
+	 
+			//cin>>s[i].id; 
+	 printf("ENTER THE FOOD TAKEN TIME BY THE STUDENT %d \n",i+1); 
+	 scanf("%d",&s[i].F_time); 
+			s[i].B_time = s[i].F_time; 
+	 
+		} 
+		SORT_DESC(s); 
+	 
+	 printf("STUDENTS ENTERED THE QUEUE IN THE FOLLOWING WAY \n"); 
+	 while(REMAIN(s)){ 
+	 printf("%d\n ",s[0].id); 
+	 TotalTaskTime(s); 
+	 s[0].F_time--; 
+	 SORT_DESC(s); 
