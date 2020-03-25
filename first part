@@ -1,0 +1,38 @@
+#include<iostream> 
+	#include<stdio.h> 
+	using namespace std; 
+	struct Student{ 
+		int id; 
+	 int B_time; 
+	 int CompletionTime ; 
+		int F_time; 
+	}; 
+	void TotalTaskTime(Student s[]){ 
+	 for (int i=0;i<3;i++){ 
+	 if(s[i].F_time!=0) 
+	 s[i].CompletionTime +=1; 
+	 } 
+	 
+	} 
+	 
+	bool REMAIN(Student s[]){ 
+	 for (int i=0;i<3;i++){ 
+	 if(s[i].F_time!=0){ 
+	 return true; 
+	 } 
+	 } 
+	 return false; 
+	} 
+	void SORT_DESC(Student s[]){ 
+	 for(int i=1;i<3;i++){ 
+	 for(int j=0;j<3-i;j++){ 
+	 if(s[j].F_time < s[j+1].F_time){ 
+	 Student temp = s[j]; 
+	 s[j]=s[j+1]; 
+	 s[j+1]=temp; 
+	 } 
+	 else if(s[j].F_time == s[j+1].F_time){ 
+	 if(s[j].id > s[j+1].id){ 
+	 Student temp = s[j]; 
+	 s[j]=s[j+1]; 
+	 s[j+1]=temp; 
