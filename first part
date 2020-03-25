@@ -58,3 +58,13 @@
 	 TotalTaskTime(s); 
 	 s[0].F_time--; 
 	 SORT_DESC(s); 
+	  printf("STUDENTS ENTERED THE QUEUE IN THE FOLLOWING WAY \n"); 
+	 while(REMAIN(s)){ 
+	 printf("%d\n ",s[0].id); 
+	 TotalTaskTime(s); 
+	 s[0].F_time--; 
+	 SORT_DESC(s); 
+	 } 
+	 int sum = 0; 
+	 int sum1 = 0; 
+	 printf("STUDENT ID | TURN AROUND TIME | WAITING TIME\n");
